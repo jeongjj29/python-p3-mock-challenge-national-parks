@@ -21,7 +21,7 @@ class TestNationalParks:
         # uncomment the next two lines if using Exceptions
         # with pytest.raises(Exception):
         #     NationalPark(2)
-        
+
         # uncomment the next two lines if using Exceptions
         # with pytest.raises(Exception):
         #     NationalPark("me")
@@ -123,13 +123,12 @@ class TestNationalParks:
         Trip(vis_2, p_1, "January 5th", "January 20th")
         assert p_1.best_visitor().name == "Tom"
 
-
-#     def test_most_visited(self):
-#         """returns the most visited park"""
-#         p_1 = NationalPark("Yosemite")
-#         p_2 = NationalPark("Yellow Stone")
-#         vis_1 = Visitor("Tom")
-#         Trip(vis_1, p_1, "May 5th", "May 9th")
-#         Trip(vis_1, p_1, "January 5th", "January 20th")
-#         Trip(vis_1, p_2, "January 25th", "January 30th")
-#         assert NationalPark.most_visited().name == "Yosemite"
+    def test_most_visited(self):
+        """returns the most visited park"""
+        p_1 = NationalPark("Yosemite")
+        p_2 = NationalPark("Yellow Stone")
+        vis_1 = Visitor("Tom")
+        Trip(vis_1, p_1, "May 5th", "May 9th")
+        Trip(vis_1, p_1, "January 5th", "January 20th")
+        Trip(vis_1, p_2, "January 25th", "January 30th")
+        assert NationalPark.most_visited().name == "Yosemite"
